@@ -8,5 +8,15 @@ def turn_count(board)
   turns
 end
 
-board = ["X", " ", "O", "X"," ","X"," "," ","X"]
+def current_player(board)
+  player = ""
+  if turn_count(board)%2 == 0
+    player = "O"
+  else
+    player = "X"
+  end
+  player
+end
+board = ["X", " ", "O", "X"," ","O"," "," ","X"]
 puts turn_count(board)
+puts "Current player: #{current_player(board)}"
